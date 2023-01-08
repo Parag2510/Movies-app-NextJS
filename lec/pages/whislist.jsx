@@ -1,5 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/navigation";
+import Image from 'next/image';
+
 
 const Page = ({ movies }) => {
   const router = useRouter();
@@ -44,7 +46,7 @@ const Page = ({ movies }) => {
             movies.map((movie) => (
               <div key={movie.id}>
                 <div>
-                  <img
+                  <image
                     src={movie.Poster}
                     alt={movie.Title}
                     width={200}

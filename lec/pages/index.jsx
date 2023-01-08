@@ -1,6 +1,8 @@
 import { Link } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Image from 'next/image';
+
 import styles from "../styles/Home.module.css";
 
 export default function Page({ movies }) {
@@ -53,7 +55,7 @@ export default function Page({ movies }) {
             movies.map((movie) => (
               <div key={movie.imdbID}>
                 <div>
-                  <img
+                  <image
                     src={movie.Poster}
                     alt={movie.Title}
                     width="200"

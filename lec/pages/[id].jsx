@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -17,7 +18,7 @@ const Page = ({ movie }) => {
         <h1 onClick={() => router.back()} style={{ cursor: "pointer" }}>
           Go Back
         </h1>
-        <img src={movie.Poster} alt={movie.Title} width={350} height={480} />
+        <image src={movie.Poster} alt={movie.Title} width={350} height={480} />
         <h2>Name: {movie.Title}</h2>
         <h3>Type : {movie.Type}</h3>
         <h3>Released : {movie.Released}</h3>
@@ -30,7 +31,7 @@ const Page = ({ movie }) => {
           <h2>Screenshots : </h2>
           {movie.Images.map((image) => (
             <div key={Math.random() + Date.now()}>
-              <img
+              <image
                 src={image}
                 width={600}
                 height={350}
